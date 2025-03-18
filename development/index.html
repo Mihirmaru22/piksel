@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black min-h-screen flex flex-col">
+
+  <!-- Navbar -->
+  <nav class="w-full bg-black p-4 flex justify-between items-center">
+    <a href="#" class="text-white text-xl font-bold ml-10">ADV</a>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="flex flex-grow">
+    <!-- Left Side: Video -->
+    <div class="w-1/2 flex justify-center items-center p-10 sm:block hidden mt-10">
+      <video autoplay loop muted class="w-full max-h-screen rounded-lg">
+        <source src="/assets-how/cube_box_animation.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- Right Side: Form -->
+    <div class="flex justify-center items-center w-full sm:w-1/2 p-20">
+      <div class="form-container bg-black text-white p-12 rounded-lg shadow-lg w-full max-w-lg border border-gray-700">
+        <h2 class="text-3xl font-bold">Sign In</h2>
+        <p class="text-gray-400 mb-6">Enter your email and password to sign in!</p>
+
+        <!-- Google Sign-In Button -->
+        <button
+          class="flex items-center justify-center gap-2 bg-gray-800 text-white font-bold py-3 px-5 rounded-md w-full border border-gray-600 hover:border-gray-400 hover:bg-gray-700 transition-all duration-300">
+          <img src="image.png" alt="Google" class="w-6 h-6">
+          <span>Sign in with Google</span>
+        </button>
+
+        <!-- Form -->
+        <form class="mt-8">
+          <label class="block text-gray-300 font-semibold">Email</label>
+          <input type="email" placeholder="name@example.com"
+                 class="w-full bg-gray-900 text-white p-4 rounded-md border border-gray-700 focus:outline-none focus:border-pink-500 mt-1 transition-all duration-300">
+
+          <label class="block text-gray-300 font-semibold mt-5">Password</label>
+          <input type="password" placeholder="Password"
+                 class="w-full bg-gray-900 text-white p-4 rounded-md border border-gray-700 focus:outline-none focus:border-pink-500 mt-1 transition-all duration-300">
+
+          <!-- Sign In Button -->
+          <a href="/development/dev-form/index.html" 
+   class="block bg-pink-600 hover:bg-pink-500 text-white font-bold py-4 rounded-md w-full mt-8 text-center transition-all duration-300 shadow-lg hover:shadow-pink-500/50">
+  Sign In
+</a>
+        </form>
+
+        <!-- Forgot Password -->
+        <p class="text-gray-400 mt-5 text-center">
+          <a href="#" class="text-pink-500 hover:underline">Forgot your password?</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

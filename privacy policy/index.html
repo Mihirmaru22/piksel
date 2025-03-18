@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        @layer utilities {
+            .glass {
+                background: rgba(255, 255, 255, 0.05);
+                backdrop-filter: blur(20px);
+                border-radius: 12px;
+                border: 1px solid rgba(255, 255, 255, 0.15);
+                transition: all 0.3s ease-in-out;
+                cursor: pointer;
+                padding: 1.5rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+            }
+            .glass:hover {
+                transform: translateY(-3px);
+                box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.3);
+            }
+            body {
+                background: #0a0a0a;
+                color: #e6e6e6;
+                font-family: 'Inter', sans-serif;
+            }
+            h1, h2 {
+                text-transform: uppercase;
+                font-weight: 700;
+                letter-spacing: 1px;
+            }
+            h1 {
+                font-size: 3rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            .accordion-content {
+                max-height: 0;
+                opacity: 0;
+                overflow: hidden;
+                transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out;
+            }
+            .expanded {
+                max-height: 1000px;
+                opacity: 1;
+            }
+            .icon {
+                font-size: 24px;
+                transition: transform 0.3s ease;
+            }
+            .rotate {
+                transform: rotate(180deg);
+            }
+            /* Footer Styles */
+            .footer {
+                background: rgba(255, 255, 255, 0.05);
+                border-top: 1px solid rgba(255, 255, 255, 0.15);
+                text-align: center;
+                padding: 1rem;
+                font-size: 0.875rem;
+                color: #bbb;
+                margin-top: 2rem;
+            }
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen px-6">
+
+    <header class="w-full text-center py-8">
+        <h1 class="text-white">Privacy Policy</h1>
+        <p class="text-gray-400 mt-2 text-lg">Effective Date: March 18, 2025</p>
+    </header>
+
+    <main class="max-w-4xl w-full">
+
+        <section class="glass mb-4" onclick="toggleSection('intro', 'icon1')">
+            <h2>1. Introduction</h2>
+            <i id="icon1" class="ph ph-caret-down icon"></i>
+        </section>
+        <div id="intro" class="accordion-content">
+            <p class="text-gray-400 px-6 pb-4">
+                We take your privacy seriously. This Privacy Policy outlines how we collect, use, and protect your data in compliance with global regulations.
+            </p>
+        </div>
+
+        <section class="glass mb-4" onclick="toggleSection('dataCollection', 'icon2')">
+            <h2>2. Information We Collect</h2>
+            <i id="icon2" class="ph ph-caret-down icon"></i>
+        </section>
+        <div id="dataCollection" class="accordion-content">
+            <ul class="list-disc list-inside px-6 pb-4 text-gray-400 space-y-2">
+                <li><strong>Personal Data:</strong> Name, email, contact details.</li>
+                <li><strong>Usage Data:</strong> Pages visited, interactions, timestamps.</li>
+                <li><strong>Cookies & Tracking:</strong> For analytics and user experience improvements.</li>
+            </ul>
+        </div>
+
+        <section class="glass mb-4" onclick="toggleSection('dataUsage', 'icon3')">
+            <h2>3. How We Use Your Data</h2>
+            <i id="icon3" class="ph ph-caret-down icon"></i>
+        </section>
+        <div id="dataUsage" class="accordion-content">
+            <p class="px-6 pb-4 text-gray-400">
+                Your data helps us enhance security, improve services, personalize experiences, and ensure compliance with legal obligations.
+            </p>
+        </div>
+
+        <section class="glass mb-4" onclick="toggleSection('thirdParty', 'icon4')">
+            <h2>4. Third-Party Data Sharing</h2>
+            <i id="icon4" class="ph ph-caret-down icon"></i>
+        </section>
+        <div id="thirdParty" class="accordion-content">
+            <p class="px-6 pb-4 text-gray-400">
+                We do not sell your data. However, trusted partners may process data for security, fraud detection, and service enhancements.
+            </p>
+        </div>
+
+        <section class="glass mb-4" onclick="toggleSection('security', 'icon5')">
+            <h2>5. Data Security Measures</h2>
+            <i id="icon5" class="ph ph-caret-down icon"></i>
+        </section>
+        <div id="security" class="accordion-content">
+            <p class="px-6 pb-4 text-gray-400">
+                We use encryption, secure servers, and strict access controls to protect your data from unauthorized access.
+            </p>
+        </div>
+
+        <section class="glass mb-4" onclick="toggleSection('rights', 'icon6')">
+            <h2>6. Your Rights & Choices</h2>
+            <i id="icon6" class="ph ph-caret-down icon"></i>
+        </section>
+        <div id="rights" class="accordion-content">
+            <p class="px-6 pb-4 text-gray-400">
+                You have the right to request data access, correction, deletion, or restriction of processing under GDPR & CCPA.
+            </p>
+        </div>
+
+        <section class="glass mb-4" onclick="toggleSection('updates', 'icon7')">
+            <h2>7. Updates to This Policy</h2>
+            <i id="icon7" class="ph ph-caret-down icon"></i>
+        </section>
+        <div id="updates" class="accordion-content">
+            <p class="px-6 pb-4 text-gray-400">
+                This policy may be updated periodically. We encourage you to review it regularly for any changes.
+            </p>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-gray-500 text-center text-sm mt-10 border-t border-gray-800 pt-4">
+        &copy; 2025 PIKSEL. All Rights Reserved.
+    </footer>
+</main>
+
+<script>
+    function toggleSection(sectionId, iconId) {
+        const section = document.getElementById(sectionId);
+        const icon = document.getElementById(iconId);
+        section.classList.toggle("expanded");
+        icon.classList.toggle("rotate");
+    }
+</script>
+
+</body>
+</html>
