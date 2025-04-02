@@ -117,12 +117,12 @@
                 <option value="other">Other</option>
             </select>
 
-            <label for="budget">Budget Range (USD)</label>
+            <label for="budget">Budget Range </label>
             <select id="budget" required>
                 <option value="" disabled selected>Select your budget</option>
-                <option value="500-1000">$500 - $1,000</option>
-                <option value="1000-5000">$1,000 - $5,000</option>
-                <option value="5000+">$5,000+</option>
+                <option value="500-1000">5000 - 10,000</option>
+                <option value="1000-5000">10,000 - 50,000</option>
+                <option value="5000+">50,000+</option>
             </select>
 
             <label for="deadline">Deadline</label>
@@ -139,10 +139,24 @@
     </div>
 
     <script>
-        document.getElementById("requestForm").addEventListener("submit", function(event) {
+        //initail function to respond with the request submission
+        
+       /* document.getElementById("requestForm").addEventListener("submit", function(event) {
             event.preventDefault();
             alert("Your request has been submitted successfully!");
-        });
+        }); */
+
+
+            document.getElementById("requestForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form from submitting normally
+        
+        alert("Your request has been submitted successfully!"); // Show alert
+        
+        // Redirect after a short delay (optional)
+        setTimeout(function() {
+            window.location.href = "/index.html"; 
+        }, 1000); // 1-second delay for better user experience
+    });
     </script>
 
 </body>
